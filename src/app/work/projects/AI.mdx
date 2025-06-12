@@ -1,0 +1,52 @@
+---
+title: "Escape The AI, a Dialogue based Puzzle game Using Generative AI"
+publishedAt: "2024-04-08"
+summary: "Built an AI-driven NPC system in Unity using OpenAI’s GPT and Amazon Polly to enable natural dialogue, emotional responses, and autonomous behavior. While almost all games work on decision trees and LSTMS my model uses Generative AI to deliver responses. Integrated voice/text input, real-time lip sync with blendshapes, and dynamic decision-making via NavMeshAgent and internal emotional states. Designed custom C# scripts for AI integration, speech playback, and behavior parsing to deliver immersive, human-like NPC interactions."
+images:
+  - "/images/projects/project-01/AI vid.mp4"
+  - "/images/projects/project-01/AI killer mode (2).png"
+  - "/images/projects/project-01/AI killer mode (4).png"
+  - "/images/projects/project-01/AI killer mode (1).png"
+  - "/images/projects/project-01/AI killer mode (3).png"
+team:
+  - name: "Bhavya Bhardwaj"
+    role: "Game Developer"
+    avatar: "/images/projects/project-01/Bhavya.jpg"
+    linkedIn: "https://www.linkedin.com/in/bhavya-bhardwaj88/"
+  - name: "Harsh Mahatha"
+    role: "Game Developer"
+    avatar: "/images/projects/project-01/avatar-01.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+---
+
+## Overview
+
+Escape the AI is a first-person voice-controlled narrative puzzle game built in Unity using C#. The project explores next-generation AI-driven NPC interaction, combining real-time voice input, emotional expression, dynamic behavior, and memory-based responses. The game features an intelligent captor NPC who adapts, converses, and evolves in reaction to the player’s voice and text input, enabling a deeply immersive experience. By blending OpenAI’s GPT models, Amazon Polly for text-to-speech, and Unity animation systems, this project pushes the boundaries of NPC realism and emotional responsiveness.
+## Key Features
+
+- **Voice-Based Command System**: Implemented real-time voice recognition using OpenAI’s Whisper, allowing players to issue natural language commands through speech or text that directly influence NPC behavior.
+- **Emotionally Adaptive NPC**: Designed a lifelike AI character capable of expressing joy, anger, fear, and sadness using voice tone, facial animations (via uLipSync + BlendShapes), and contextual behavior.
+- **Natural Dialogue System**: Enabled unscripted, dynamic conversations through GPT-4 integration, where the NPC generates emotionally resonant, context-aware responses.
+- **Text-to-Speech Voice Output**: Integrated Amazon Polly for dynamic voice synthesis, converting GPT output into spoken dialogue with emotional tone matching and lip-sync synchronization.
+- **Command Parsing and Behavior Control**: Built a custom command pipeline (e.g., npc_movement_mode: follow, npc_action: move_to_point) parsed from GPT responses and executed in Unity to trigger pathfinding, animations, and game logic.
+- **Memory & Persistence**: Developed a system for short-term interaction memory where the NPC recalls recent commands and player decisions, allowing adaptive behavior and emotional escalation.
+- **Puzzle Integration**: Combined AI interaction with gameplay puzzles requiring the player to solve challenges or manipulate the environment while managing the unpredictable behavior of the NPC captor.
+
+## Technologies Used
+
+- **Unity**: Main engine for game development, physics simulation, and real-time rendering.
+- **C#**: Scripting language used to implement gameplay logic, AI behaviors, and UI systems.
+- **OpenAI GPT API**: Natural language generation and decision-making logic for NPC interaction.
+- **Amazon Polly**: Converts text responses into emotionally expressive speech.
+- **Whisper (OpenAI)**: Real-time voice-to-text transcription for spoken commands.
+- **Blender + Vroid Studio**: For 3D NPC models and facial rigging.
+- **uLipSync + BlendShapes**: For dynamic lip-sync animation based on phoneme analysis.
+- **TextMeshPro**: For in-game UI and dialogue display.
+
+## Challenges and Learnings
+
+Key challenges included maintaining low-latency interactions between the voice input, GPT processing, and NPC responses, especially across asynchronous pipelines (Whisper → GPT → Polly). Ensuring realistic emotional feedback both facially and vocally required precise timing between TTS audio and Unity’s BlendShape animations. Additionally, creating believable behavior transitions using parsed GPT commands tested the boundaries of Unity’s AI navigation systems and animator controllers. The team gained deep insight into modular system architecture, real-time AI feedback loops, and the emotional impact of voice-based gameplay.
+
+## Outcome
+
+The final prototype delivered a rich, immersive experience where players interact with a human-like NPC using their voice. The game achieves a new level of narrative depth by letting players shape the story through spoken input and emotional manipulation. It sets a foundation for the future of emotional AI in games, blending natural language understanding, facial expression, memory, and behavior to create truly lifelike digital characters.
