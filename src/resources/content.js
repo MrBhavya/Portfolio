@@ -7,7 +7,7 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Game Developer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/projects/project-01/Bhavya2.jpg",
   email: "bbhardwaj0803@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
@@ -46,7 +46,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between games and reality</>,
+  headline: <>Building bridges between Gaming and Reality</>,
   featured: {
     display: true,
     title: <>Recent project: <strong className="ml-4">Escape The AI</strong></>,
@@ -72,7 +72,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -135,7 +135,8 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "JIMS Engineering Management Technical Campus, Greater Noida",
+        name: "Guru Gobind Singh Indraprastha University | GGSIPU",
+        location: "Delhi, India",
         degree: "Bachelor of Technology in Computer Science",
         timeframe: "2021 - 2025",
         cgpa: "8.6",
@@ -167,36 +168,49 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Unity | Unreal Engine",
+        description: <>Proficient in using Unity and Unreal Engine for game development.</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        // images: [
+        //   {
+        //     src: "/images/projects/project-01/cover-02.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        //   {
+        //     src: "/images/projects/project-01/cover-03.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        // ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "C# | C++",
+        description: <>Experienced in C# and C++ programming languages for game logic and performance optimization.</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        // images: [
+        //   {
+        //     src: "/images/projects/project-01/cover-04.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        // ],
+      },
+      {
+        title: "Blender | Photoshop | VRM studio | Asperite",
+        description: <>Skilled in using Blender, Photoshop, VRM Studio, and Aseprite for 3D modeling, texture creation, avatar design, and sprite editing respectively.</>,
+        // optional: leave the array empty if you don't want to display images
+        // images: [
+        //   {
+        //     src: "/images/projects/project-01/cover-05.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        // ],
       },
     ],
   },
