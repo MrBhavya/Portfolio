@@ -13,8 +13,6 @@ const person = {
   languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
-
-
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
@@ -170,47 +168,17 @@ const about = {
       {
         title: "Unity | Unreal Engine",
         description: <>Proficient in using Unity and Unreal Engine for game development.</>,
-        // optional: leave the array empty if you don't want to display images
-        // images: [
-        //   {
-        //     src: "/images/projects/project-01/cover-02.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
-        //   {
-        //     src: "/images/projects/project-01/cover-03.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
-        // ],
+        images: [],
       },
       {
         title: "C# | C++",
         description: <>Experienced in C# and C++ programming languages for game logic and performance optimization.</>,
-        // optional: leave the array empty if you don't want to display images
-        // images: [
-        //   {
-        //     src: "/images/projects/project-01/cover-04.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
-        // ],
+        images: [],
       },
       {
         title: "Blender | Photoshop | VRM studio | Asperite",
         description: <>Skilled in using Blender, Photoshop, VRM Studio, and Aseprite for 3D modeling, texture creation, avatar design, and sprite editing respectively.</>,
-        // optional: leave the array empty if you don't want to display images
-        // images: [
-        //   {
-        //     src: "/images/projects/project-01/cover-05.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
-        // ],
+        images: [],
       },
     ],
   },
