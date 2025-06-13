@@ -168,17 +168,56 @@ const about = {
       {
         title: "Unity | Unreal Engine",
         description: <>Proficient in using Unity and Unreal Engine for game development.</>,
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         title: "C# | C++",
         description: <>Experienced in C# and C++ programming languages for game logic and performance optimization.</>,
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         title: "Blender | Photoshop | VRM studio | Asperite",
         description: <>Skilled in using Blender, Photoshop, VRM Studio, and Aseprite for 3D modeling, texture creation, avatar design, and sprite editing respectively.</>,
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -189,6 +228,7 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
+  
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
