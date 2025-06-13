@@ -28,6 +28,12 @@ export async function generateMetadata() {
 }
 
 export default function About() {
+  type SkillImage = { src: string; alt?: string; width?: number; height?: number };
+  type Skill = {
+    title: string;
+    description: React.ReactNode;
+    images?: SkillImage[];
+  };
   const structure = [
     {
       title: about.intro.title,
@@ -298,7 +304,7 @@ export default function About() {
                 {about.technical.title}
               </Heading>
               <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
+                {about.technical.skills.map((skill: Skill, index) => (
                   <Column key={skill.title || index} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
@@ -306,7 +312,7 @@ export default function About() {
                     </Text>
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, imgIdx) => (
+                        {skill.images.map((image: SkillImage, imgIdx) => (
                           <Flex
                             key={image.src || imgIdx}
                             border="neutral-medium"
