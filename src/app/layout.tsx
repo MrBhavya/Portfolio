@@ -1,5 +1,6 @@
 import '@once-ui-system/core/css/styles.css';
 import '@once-ui-system/core/css/tokens.css';
+import '@/resources/custom.css'
 
 import classNames from "classnames";
 
@@ -17,11 +18,11 @@ export async function generateMetadata() {
   });
 }
 
-interface RootLayoutProps {
+export default async function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}
-
-export default async function RootLayout({ children }: RootLayoutProps) {
+}>) {
   return (
     <Flex
       suppressHydrationWarning

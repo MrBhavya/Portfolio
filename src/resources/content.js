@@ -13,6 +13,17 @@ const person = {
   languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
+const newsletter = {
+  display: false,
+  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  description: (
+    <>
+      I occasionally write about design, technology, and share thoughts on the intersection of
+      creativity and engineering.
+    </>
+  ),
+};
+
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
@@ -44,11 +55,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between Gaming and Reality</>,
+  headline: <>Building bridges between Games and Reality</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Escape The AI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Recent project: <strong className="ml-4">Escape the AI</strong></>,
+    href: "/work/AI",
   },
   subline: (
     <>
@@ -83,7 +94,7 @@ const about = {
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -170,13 +181,25 @@ const about = {
         description: <>Proficient in using Unity and Unreal Engine for game development.</>,
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/game1.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/project-01/game2.png",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/game3.png",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/game.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -188,13 +211,13 @@ const about = {
         description: <>Experienced in C# and C++ programming languages for game logic and performance optimization.</>,
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/code (3).png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/project-01/code.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -206,13 +229,13 @@ const about = {
         description: <>Skilled in using Blender, Photoshop, VRM Studio, and Aseprite for 3D modeling, texture creation, avatar design, and sprite editing respectively.</>,
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/blend1.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/project-01/blend2.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -228,7 +251,6 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -293,4 +315,4 @@ const gallery = {
   ],
 };
 
-export { person, social, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery };

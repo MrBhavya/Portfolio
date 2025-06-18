@@ -22,18 +22,12 @@ export async function generateMetadata() {
     title: about.title,
     description: about.description,
     baseURL: baseURL,
-    image: `${baseURL}/generate-og?title=${encodeURIComponent(about.title)}`,
+    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
     path: about.path,
   });
 }
 
 export default function About() {
-  type SkillImage = { src: string; alt?: string; width?: number; height?: number };
-  type Skill = {
-    title: string;
-    description: React.ReactNode;
-    images?: SkillImage[];
-  };
   const structure = [
     {
       title: about.intro.title,
@@ -64,7 +58,7 @@ export default function About() {
         title={about.title}
         description={about.description}
         path={about.path}
-        image={`${baseURL}/generate-og?title=${encodeURIComponent(about.title)}`}
+        image={`/api/og/generate?title=${encodeURIComponent(about.title)}`}
         author={{
           name: person.name,
           url: `${baseURL}${about.path}`,
@@ -264,29 +258,9 @@ export default function About() {
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
-                    {institution.timeframe && (
-                      <Text variant="label-default-s" onBackground="neutral-weak">
-                        {institution.timeframe}
-                      </Text>
-                    )}
-                    {institution.xii || institution.x ? (
-                      <ul style={{ margin: 0, paddingLeft: 20 }}>
-                        {institution.xii && (
-                          <li>
-                            XII Percentage: {institution.xii.percentage} ({institution.xii.year})
-                          </li>
-                        )}
-                        {institution.x && (
-                          <li>
-                            X Percentage: {institution.x.percentage} ({institution.x.year})
-                          </li>
-                        )}
-                      </ul>
-                    ) : (
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {institution.description}
-                      </Text>
-                    )}
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {institution.description}
+                    </Text>
                   </Column>
                 ))}
               </Column>
@@ -304,17 +278,17 @@ export default function About() {
                 {about.technical.title}
               </Heading>
               <Column fillWidth gap="l">
-                {about.technical.skills.map((skill: Skill, index) => (
-                  <Column key={skill.title || index} fillWidth gap="4">
+                {about.technical.skills.map((skill, index) => (
+                  <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image: SkillImage, imgIdx) => (
+                        {skill.images.map((image, index) => (
                           <Flex
-                            key={image.src || imgIdx}
+                            key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
